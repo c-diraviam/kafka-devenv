@@ -11,7 +11,7 @@ services:
     image: jeqo/apache-zookeeper:3.4.8
   
   
-  python-kafka-consumer:
+  python-kafka:
     image: python-kafka:latest
     volumes:
       - ./python-kafka:/code

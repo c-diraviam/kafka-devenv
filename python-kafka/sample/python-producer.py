@@ -4,10 +4,10 @@ from kafka.errors import KafkaError
 
 kafka_producer=KafkaProducer(bootstrap_servers='kafka:9092')
 
-input_file=open('./readfile','r')
+input_file=open('/code/sample/readfile','r')
 
 for char in input_file:
-    print(char)
+    #print(char)
     byte_str=str.encode(char)
     #kafka_producer.send('kafka_test', b'msg_size: %d' %len(char))
     
