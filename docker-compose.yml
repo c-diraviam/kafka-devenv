@@ -4,10 +4,15 @@ services:
     image: jeqo/apache-kafka:0.10.1.0-2.11
     links:
       - zookeeper
+    depends_on:
+      - zookeeper
+    
   zookeeper:
     image: jeqo/apache-zookeeper:3.4.8
   
-  python-kafka:
+  
+  python-kafka-consumer:
     image: python-kafka:latest
     volumes:
       - ./python-kafka:/code
+    
